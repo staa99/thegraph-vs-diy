@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: USDT
+    network: mainnet
+    source:
+      address: "0xdac17f958d2ee523a2206206994597c13d831ec7"
+      abi: USDT
+      startBlock: 16615600
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Transfer
+      abis:
+        - name: USDT
+          file: ./abis/USDT.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/mapping.ts

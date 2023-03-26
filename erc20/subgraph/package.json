@@ -1,0 +1,16 @@
+{
+  "name": "thegraph-vs-diy-erc20",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --studio thegraph-vs-diy-erc20",
+    "create-local": "graph create --node http://localhost:8020/ thegraph-vs-diy-erc20",
+    "remove-local": "graph remove --node http://localhost:8020/ thegraph-vs-diy-erc20",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 thegraph-vs-diy-erc20"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.27.0",
+    "@graphprotocol/graph-ts": "0.24.1"
+  }
+}
