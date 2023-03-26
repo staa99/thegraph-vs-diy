@@ -1,5 +1,5 @@
 {
-  "name": "thegraph-vs-diy-erc20",
+  "name": "thegraph-vs-diy-erc20-subgraph",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
